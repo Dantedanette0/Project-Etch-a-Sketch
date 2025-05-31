@@ -14,17 +14,30 @@ for (let r = 0; r < rows; r++) {
   }
 
 
-    container.addEventListener('mouseover', e => {
-    if (e.target.matches('.cell')) {
-        e.target.style.backgroundColor = 'blue';
-    }
-    });
-    
-    container.addEventListener('mouseout', e => {
-    if (e.target.matches('.cell')) {
-        e.target.style.backgroundColor = 'purple';
-    }
-    });
-
   container.appendChild(rowEl);
 }
+
+function remove_grid() {
+  const rows = container.querySelectorAll('.row');
+  rows.forEach(row => row.remove());
+}
+
+
+container.addEventListener('mouseover', e => {
+if (e.target.matches('.cell')) {
+    e.target.style.backgroundColor = 'blue';
+}
+});
+
+container.addEventListener('mouseout', e => {
+if (e.target.matches('.cell')) {
+    e.target.style.backgroundColor = 'purple';
+}
+});
+
+const new_sktech_button = document.querySelector('.new-sketch');
+
+
+new_sktech_button.addEventListener('click', () => {
+    remove_grid();
+});
