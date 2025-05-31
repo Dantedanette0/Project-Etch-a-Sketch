@@ -1,21 +1,20 @@
-const rows = 16;
-const columns = 16;
 const container = document.querySelector('.container');
 
-for (let r = 0; r < rows; r++) {
-  const rowEl = document.createElement('div');
-  rowEl.classList.add('row');
+function create_grid(rows, columns) {
+  for (let r = 0; r < rows; r++) {
+    const rowEl = document.createElement('div');
+    rowEl.classList.add('row');
 
-  for (let c = 0; c < columns; c++) {
-    const cell = document.createElement('div');
-    cell.classList.add('cell');
-    rowEl.appendChild(cell);
+    for (let c = 0; c < columns; c++) {
+      const cell = document.createElement('div');
+      cell.classList.add('cell');
+      rowEl.appendChild(cell);
+    }
 
+    container.appendChild(rowEl);
   }
-
-
-  container.appendChild(rowEl);
 }
+
 
 function remove_grid() {
   const rows = container.querySelectorAll('.row');
@@ -40,4 +39,5 @@ const new_sktech_button = document.querySelector('.new-sketch');
 
 new_sktech_button.addEventListener('click', () => {
     remove_grid();
+    create_grid(16,16);
 });
