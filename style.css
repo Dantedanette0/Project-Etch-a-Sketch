@@ -6,11 +6,13 @@ body {
   align-items: center;
   margin: 0;
   background: #f5f5f5;
+  gap: 10px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  margin: 30px;
 }
 
 .row {
@@ -19,8 +21,18 @@ body {
 
 .cell {
   display: flex;  
-  width: 70px;
-  height: 70px;
-  border: 1px solid #f81111;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #080000;
   box-sizing: border-box;
+}
+
+.new-sketch{
+    background-color: #058050;
+    color: #f5f5f5;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 30px;
 }

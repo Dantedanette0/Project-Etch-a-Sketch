@@ -39,5 +39,5 @@ const new_sktech_button = document.querySelector('.new-sketch');
 
 new_sktech_button.addEventListener('click', () => {
     remove_grid();
-    create_grid(16,16);
+    create_grid(128,128);
 });
